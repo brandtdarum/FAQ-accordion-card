@@ -73,7 +73,7 @@ body {
     }
 
     .btn img{
-        align-self: flex-start;
+        align-self: center;
     }
 
     .btn:hover span {
@@ -88,13 +88,25 @@ body {
         @include font($color: $fColor2);
     }
 
-    #headerBoxDesktop, li p, li input {
+    #headerBoxDesktop, li input {
         display: none;
+    }
+
+    li p {
+        max-height: 0px;
+        margin: 0px;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+
+        overflow: hidden;
     }
 
     li input:checked ~ p {
         flex: 1 1 100%;
-        display: block;
+        max-height: 15rem;
+        margin: 10px;
+        opacity: 1;
+        transition: 0.4s ease-in-out;
     }
 
     li input:checked ~ .btn > span {

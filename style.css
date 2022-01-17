@@ -53,7 +53,7 @@ body {
   justify-content: space-between;
 }
 #card .btn img {
-  align-self: flex-start;
+  align-self: center;
 }
 #card .btn:hover span {
   color: #f47c57;
@@ -70,12 +70,22 @@ body {
   font-weight: 400;
   color: #787887;
 }
-#card #headerBoxDesktop, #card li p, #card li input {
+#card #headerBoxDesktop, #card li input {
   display: none;
+}
+#card li p {
+  max-height: 0px;
+  margin: 0px;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
 }
 #card li input:checked ~ p {
   flex: 1 1 100%;
-  display: block;
+  max-height: 15rem;
+  margin: 10px;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
 }
 #card li input:checked ~ .btn > span {
   color: #4a4b5e;
