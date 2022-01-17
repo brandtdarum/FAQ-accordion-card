@@ -1,0 +1,93 @@
+/*
+# Front-end Style Guide
+
+### Neutral
+
+#### Text
+
+- : 
+- : 
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+*/
+
+$color1: hsl(238, 29%, 16%); //Very dark desaturated blue
+$color2: hsl(14, 88%, 65%); //Soft red
+
+$fColor1: hsl(237, 12%, 33%); //Very dark grayish blue
+$fColor2: hsl(240, 6%, 50%); //Dark grayish blue
+
+$fFamily: 'Kumbh Sans', sans-serif;
+$fSize: 0.75rem;
+
+@mixin font($size: 0.75rem, $weight: 400, $color: $fColor1) {
+    font-family: $fFamily;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+
+body {
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    background: white url("./images/bg-pattern-mobile.svg") no-repeat center top;
+    max-width: 340px;
+    border-radius: 20px;
+    padding-top: 100px;
+    box-shadow: 0px 20px 35px 5px hsla(0, 0%, 0%, 0.3);
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    #headerImage{
+        position: absolute;
+        width: calc(100% - 100px);
+        top: -107px;
+    }
+    h1 {
+        margin: 10px 0px;
+        @include font($size: 2.25rem, $weight: 700);
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 30px;
+    }
+
+    li p, li input {
+        display: none;
+    }
+
+    li input:checked + p {
+        display: block;
+    }
+
+}
+
+
+.attribution { color: white; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
