@@ -95,9 +95,9 @@ body {
 @media only screen and (min-width: 1439px) {
   #card {
     width: 855px;
-    min-height: 60vh;
+    max-height: 855px;
     padding-top: 0px;
-    padding-left: 30%;
+    padding-left: 430px;
     background-color: white;
     background-image: url("./images/illustration-woman-online-desktop.svg"), url("./images/bg-pattern-desktop.svg");
     background-position: right 125% bottom 70%, left 535% bottom 30%;
